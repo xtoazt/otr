@@ -45,7 +45,7 @@ export default class Chat extends React.Component<{}, IChatState> {
     }
 
     public render() {
-        const link = "https://otr.to/#" + this.peerId;
+        const link = "https://otr-ivory.vercel.app/#" + this.peerId;
         const messageInput = this.state.connection ? (
             <div className="container" style={{ position: 'fixed', bottom: 0, right: '50%', transform: 'translateX(50%)', width: '100%', padding: '.5rem' }}>
                 <form onSubmit={this.sendMessage}>
@@ -120,37 +120,7 @@ export default class Chat extends React.Component<{}, IChatState> {
                             </div>
                         </div>
 
-                        <h2 className="subtitle is-5">Share link</h2>
-                        <div className="columns">
-                            <div className="column">
-                                <a href={"https://telegram.me/share/url?url=" + link}
-                                   className="button is-primary is-fullwidth has-text-weight-bold"
-                                   target="_blank"
-                                >
-                                    <span className="icon"><img src="/images/icons/telegram.svg" alt="Telegram"/></span>
-                                    <span>Telegram</span>
-                                </a>
-                            </div>
 
-                            <div className="column">
-                                <a href={"https://wa.me/?text=" + link}
-                                   className="button is-primary is-fullwidth has-text-weight-bold"
-                                   target="_blank"
-                                >
-                                    <span className="icon"><img src="/images/icons/whatsapp.svg" alt="WhatsApp"/></span>
-                                    <span>WhatsApp</span>
-                                </a>
-                            </div>
-
-                            <div className="column">
-                                <a href={"mailto:?subject=&body=" + link}
-                                   className="button is-primary is-fullwidth has-text-weight-bold"
-                                   target="_blank"
-                                >
-                                    <span>E-Mail</span>
-                                </a>
-                            </div>
-                        </div>
 
                         <h2 className="subtitle is-4">How it works</h2>
                         <p>We believe that everyone has the right to communicate privately. That's why we provide
@@ -177,10 +147,6 @@ export default class Chat extends React.Component<{}, IChatState> {
                             </div>
                         </div>
 
-                        <hr/>
-
-                        <a className="github-button" href="https://github.com/jermainee/otr.to" data-size="large"
-                           data-show-count="true" aria-label="Star jermainee/nachricht.co on GitHub">Star</a>
                     </div>
                 </div>
             </div>
